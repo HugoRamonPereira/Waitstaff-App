@@ -7,7 +7,7 @@ const Header = () => {
       <Styled.Content>
         <div className="page-details">
           <h1>Orders</h1>
-          <h2>Watch your customer&apos;s orders</h2>
+          <h2>Manage your customer&apos;s orders</h2>
         </div>
         <Styled.Logo src={logo} alt="waitstaff logo" />
       </Styled.Content>

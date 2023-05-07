@@ -31,7 +31,7 @@ const Orders = () => {
       />
       <OrdersBoard
         icon="🧑🏼‍🍳"
-        title="Food in preparation"
+        title="Order in preparation"
         orders={[]}
       />
       <OrdersBoard
