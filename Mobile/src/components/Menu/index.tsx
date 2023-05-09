@@ -1,9 +1,5 @@
-import { Text } from '../Text';
-
 const Menu = () => {
-  return (
-    <Text>Menu</Text>
-  );
+  return null;
 };
 
 export default Menu;

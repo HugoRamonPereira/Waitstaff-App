@@ -1,4 +1,4 @@
-const categories = [
+export const categories = [
   {
     _id: '6372d595f9ebdda354700c8d',
     name: 'Pizza',
@@ -18,5 +18,5 @@ const categories = [
     _id: '6372d5dcf9ebdda354700c94',
     name: 'Promoções',
     icon: '🏷',
-  },
+  }
 ];
