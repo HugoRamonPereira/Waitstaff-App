@@ -13,3 +13,4 @@ export const Text = styled.Text<TextProps>`
   font-size: ${({ size }) => size ? `${size}px` : '16px'};
   opacity: ${({ opacity }) => opacity || 1};
 `;
+
