@@ -6,7 +6,7 @@ export const categories = [
   },
   {
     _id: '6372d5bff9ebdda354700c90',
-    name: 'Bebidas',
+    name: 'Beverages',
     icon: '🍻',
   },
   {
@@ -16,7 +16,7 @@ export const categories = [
   },
   {
     _id: '6372d5dcf9ebdda354700c94',
-    name: 'Promoções',
+    name: 'Off',
     icon: '🏷',
   }
 ];
