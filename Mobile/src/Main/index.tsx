@@ -14,10 +14,17 @@ const Main = () => {
     setSelectedTable(table);
   };
 
+  const handleCancelOrder = () => {
+    setSelectedTable('');
+  };
+
   return (
     <>
       <Styled.Container>
-        <Header />
+        <Header
+          selectedTable={selectedTable}
+          onCancelOrder={handleCancelOrder}
+        />
 
         <Styled.CategoriesContainer>
           <Categories />
