@@ -3,6 +3,8 @@ import { Product } from '../../types/Product';
 import * as Styled from './styles';
 import { Close } from '../Icons/Close';
 import { Text } from '../Text';
+import formatCurrency from '../../utils/formatCurrency';
+import Button from '../Button';
 
 interface ProductModalProps {
   visible: boolean;
@@ -38,31 +40,41 @@ const ProductModal = ({ visible, onClose, product }: ProductModalProps) => {
           <Text color='#666' style={{ marginTop: 8 }}>{product.description}</Text>
         </Styled.Header>
 
-        <Styled.IngredientsContainer>
-          <Text weight='600' color='#666'>Ingredients</Text>
+        {product.ingredients.length > 0 && (
+          <Styled.IngredientsContainer>
+            <Text weight='600' color='#666'>Ingredients</Text>
 
-          <FlatList
-            style={{ marginTop: 16 }}
-            data={product.ingredients}
-            keyExtractor={ingredient => ingredient._id}
-            showsVerticalScrollIndicator={false}
-            renderItem={({ item: ingredient }) => (
-              <Styled.Ingredient>
-                <Text>{ingredient.icon}</Text>
-                <Text
-                  size={14}
-                  color='#666'
-                  style={{ marginLeft: 20 }}
-                >
-                  {ingredient.name}
-                </Text>
-              </Styled.Ingredient>
-            )}
-          >
-
-          </FlatList>
-        </Styled.IngredientsContainer>
+            <FlatList
+              style={{ marginTop: 16 }}
+              data={product.ingredients}
+              keyExtractor={ingredient => ingredient._id}
+              showsVerticalScrollIndicator={false}
+              renderItem={({ item: ingredient }) => (
+                <Styled.Ingredient>
+                  <Text>{ingredient.icon}</Text>
+                  <Text
+                    size={14}
+                    color='#666'
+                    style={{ marginLeft: 20 }}
+                  >
+                    {ingredient.name}
+                  </Text>
+                </Styled.Ingredient>
+              )}
+            >
+            </FlatList>
+          </Styled.IngredientsContainer>
+        )}
       </Styled.ModalBody>
+      <Styled.Footer>
+        <Styled.FooterContainer>
+          <Styled.PriceContainer>
+            <Text color="#666">Price</Text>
+            <Text size={20} weight='600'>{formatCurrency(product.price)}</Text>
+          </Styled.PriceContainer>
+          <Button onPress={() => alert('Add to order')}>Add to order</Button>
+        </Styled.FooterContainer>
+      </Styled.Footer>
     </Modal>
   );
 };
