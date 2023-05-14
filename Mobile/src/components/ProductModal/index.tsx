@@ -10,12 +10,19 @@ interface ProductModalProps {
   visible: boolean;
   onClose: () => void;
   product: null | Product;
+  onAddToCart: (product: Product) => void;
 }
 
-const ProductModal = ({ visible, onClose, product }: ProductModalProps) => {
+const ProductModal = ({ visible, onClose, product, onAddToCart }: ProductModalProps) => {
   if (!product) {
     return null;
   }
+
+  const handleAddToCart = () => {
+    // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+    onAddToCart(product!);
+    onClose();
+  };
 
   return (
     <Modal
@@ -72,7 +79,7 @@ const ProductModal = ({ visible, onClose, product }: ProductModalProps) => {
             <Text color="#666">Price</Text>
             <Text size={20} weight='600'>{formatCurrency(product.price)}</Text>
           </Styled.PriceContainer>
-          <Button onPress={() => alert('Add to order')}>Add to order</Button>
+          <Button onPress={handleAddToCart}>Add to order</Button>
         </Styled.FooterContainer>
       </Styled.Footer>
     </Modal>
