@@ -7,9 +7,9 @@ export async function createOrder(req: Request, res: Response) {
     const { table, products } = req.body;
 
     const order = await Order.create({ table, products });
-    const orderDetails = await order.populate('products.product');
+    const OrderDetails = await order.populate('products.product');
 
-    io.emit('new_order', orderDetails);
+    io.emit('new_order', OrderDetails);
     res.status(201).json(order);
   } catch (error) {
     console.error(error);
