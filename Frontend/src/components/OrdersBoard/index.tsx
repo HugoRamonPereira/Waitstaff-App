@@ -66,7 +66,7 @@ const OrdersBoard = ({ icon, title, orders, onCancelOrder, onChangeOrderStatus }
 
       <header>
         <span>{icon}</span>
-        <strong>{title}</strong>
+        <span>{title}</span>
         <span>( {orders.length} )</span>
       </header>
 

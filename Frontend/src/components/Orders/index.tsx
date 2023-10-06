@@ -7,11 +7,10 @@ import socketIo from 'socket.io-client';
 
 const Orders = () => {
   const [orders, setOrders] = useState<Order[]>([]);
-  console.log('orders: ', orders);
 
   useEffect(() => {
     const socket = socketIo('http://localhost:3001', {
-      transports: ['websocket']
+      transports: ['websocket'],
     });
 
     socket.on('new_order', (order) => {
@@ -55,14 +54,14 @@ const Orders = () => {
       />
       <OrdersBoard
         icon="🧑🏼‍🍳"
-        title="Orders in Preparation"
+        title="In Preparation"
         orders={inProduction}
         onCancelOrder={handleCancelOrder}
         onChangeOrderStatus={handleOrderStatusChange}
       />
       <OrdersBoard
         icon="✅"
-        title="Orders Finished"
+        title="Finished"
         orders={orderFinished}
         onCancelOrder={handleCancelOrder}
         onChangeOrderStatus={handleOrderStatusChange}

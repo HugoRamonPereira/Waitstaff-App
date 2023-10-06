@@ -9,6 +9,12 @@ export const Board = styled.div`
   flex-direction: column;
   align-items: center;
 
+  @media (max-width: 576px) {
+    padding: 0.6rem;
+    margin-inline: auto;
+    width: 75%;
+  }
+
   /* This angle bracket before the header means that the styles below it will only be applied to the first and direct child of Board */
   > header {
     padding: 0.5rem;
@@ -16,6 +22,10 @@ export const Board = styled.div`
     display: flex;
     align-items: center;
     gap: 0.5rem;
+
+    @media (max-width: 992px) {
+      font-size: 0.785rem;
+    }
   }
 `;
 
@@ -24,6 +34,11 @@ export const OrdersContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin-top: 1.5rem;
+
+  @media (max-width: 576px) {
+    margin-top: 0.7rem;
+    width: 80%
+  }
 
   button {
     display: flex;
@@ -46,10 +61,6 @@ export const OrdersContainer = styled.div`
       span {
         color: #D73035;
       }
-    }
-
-    strong {
-      font-weight: 600;
     }
 
     span {
