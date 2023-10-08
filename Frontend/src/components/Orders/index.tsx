@@ -21,6 +21,8 @@ const Orders = () => {
   useEffect(() => {
     api.get('/orders')
       .then(({ data }) => {
+        console.log(data);
+
         setOrders(data);
       });
   }, []);

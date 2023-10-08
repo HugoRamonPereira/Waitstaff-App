@@ -1,8 +1,7 @@
 # This is the complete app for Waiters and Waitresses
 
-<img src='./Frontend/src/assets/images/Waitstaff-IOS-Demp-Video.gif' />
+<img src='./Frontend/src/assets/images/waitstaff-demo.gif' />
 <img src="./Frontend/src/assets/images/Front-Web-Preview.png" />
-<img src="./Frontend/src/assets/images/Android:Ios.png" />
 
 ## WAITSTAFF BACKEND - API
 ### STACK USED TO BUILD THE PROJECT

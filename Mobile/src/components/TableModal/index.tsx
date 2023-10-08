@@ -39,6 +39,7 @@ const TableModal = ({ visible, onClose, onSave }: TableModalProps) => {
               placeholder='Number of the table'
               placeholderTextColor='#666'
               keyboardType='number-pad'
+              importantForAutofill='no'
               // onChangeText={value => setTable(value)}
               // The code above gets the value of the input and adds to the state setTable.
               // We can use the shorthand below, since we are creating a value and passing this same value to the state updating function
