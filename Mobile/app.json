@@ -21,10 +21,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#D73035"
-      }
+      },
+      "package": "waitstaff.mobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "20e4ea39-1f7c-4178-9e16-8c6db74749f9"
+      }
     }
   }
 }
