@@ -14,7 +14,7 @@ export const io = new Server(server);
 
 mongoose.connect(process.env.URL_CONNECT_DB || 'mongodb://localhost:27017')
   .then(() => {
-    const port = 3001;
+    const port = process.env.PORT;
 
     app.use((req, res, next) => {
       res.setHeader('Access-Control-Allow-Origin', '*');
